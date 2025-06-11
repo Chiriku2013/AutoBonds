@@ -1,5 +1,4 @@
-https://discord.gg/Ty3EsJaRGg
-
+-- Auto Bonds Dead Rails
 _G.queuedRestart = _G.queuedRestart or false
 _G.isInRestart = _G.isInRestart or false
 _G.failedBonds = _G.failedBonds or {} -- saves the failed Bonds
