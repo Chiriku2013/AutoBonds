@@ -1,3 +1,16 @@
+local placeId = game.PlaceId
+local worldMap = {
+    [70876832253163] = true,
+    [116495829188952] = true
+}
+
+if worldMap[placeId] then
+    -- Xác định World
+    if placeId == 70876832253163 then
+        World1 = true
+    elseif placeId == 116495829188952 then
+        World2 = true
+    end
 _G.queuedRestart = _G.queuedRestart or false
 _G.isInRestart = _G.isInRestart or false
 _G.failedBonds = _G.failedBonds or {} -- saves the failed Bonds
@@ -2655,5 +2668,6 @@ local function setupAutoRestart()
         _G.isInRestart = false
     end
 end
-
-
+else
+    game.Players.LocalPlayer:Kick("This script is not supported in this game, please try again with Dead Rails!")
+end
